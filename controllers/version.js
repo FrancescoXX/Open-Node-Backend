@@ -1,6 +1,7 @@
 exports.getVersion = (req, res, next) => {
-    console.log('VERSION 0.0.1');
+    var v = "Version 0.0.2"
+    console.log(v);
     res.status(200).json({
-        version: "Version 0.0.1"
+        version: v
     })
 };
