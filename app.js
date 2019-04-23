@@ -11,6 +11,7 @@ const configure = require('./config.json');
 const feedRoutes = require('./routes/feed');
 const authRoutes = require('./routes/auth');
 const versionRoutes = require('./routes/version');
+const playersRoutes = require('./routes/players');
 
 const app = express();
 
@@ -48,6 +49,7 @@ app.use((req, res, next) => {
 app.use('/feed', feedRoutes);
 app.use('/auth', authRoutes);
 app.use('/version', versionRoutes);
+app.use('/players', playersRoutes);
 
 app.use((error, req, res, next) => {
   console.log(error);
